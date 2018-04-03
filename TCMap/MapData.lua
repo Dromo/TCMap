@@ -228,35 +228,107 @@ mapdata["North Ithilien"]["45.9S 15.2W"] = NorthIthilienCoords(-45.9, -15.2);
 GorgorothCoords = Coords(-35.4, -5.9, -69.4, 39.5);
 mapdata["Gorgoroth"]={}
 mapdata["Gorgorothc"] = GorgorothCoords;
+
+-- rare caches Udun
 mapdata["Gorgoroth"]["43.9S 0.7E"] = GorgorothCoords(-43.9, 0.7);
 mapdata["Gorgoroth"]["44.1S 0.1E"] = GorgorothCoords(-44.1, 0.1);
 mapdata["Gorgoroth"]["47.0S 3.2E"] = GorgorothCoords(-47.0, 3.2);
 mapdata["Gorgoroth"]["41.7S 4.0E"] = GorgorothCoords(-41.7, 4.0);
 mapdata["Gorgoroth"]["43.6S 8.7E"] = GorgorothCoords(-43.6, 8.7);
 
+-- rare caches Dor Armath
 mapdata["Gorgoroth"]["51.3S 11.5E"] = GorgorothCoords(-51.3, 11.5);
 mapdata["Gorgoroth"]["51.1S 13.6E"] = GorgorothCoords(-51.1, 13.6);
 mapdata["Gorgoroth"]["46.7S 12.6E"] = GorgorothCoords(-46.7, 12.6);
 mapdata["Gorgoroth"]["52.1S 17.0E"] = GorgorothCoords(-52.1, 17.0);
 mapdata["Gorgoroth"]["47.4S 18.9E"] = GorgorothCoords(-47.4, 18.9);
 
+-- rare caches Lhingris
 mapdata["Gorgoroth"]["55.0S 8.0E"] = GorgorothCoords(-55.0, 8.0);
 mapdata["Gorgoroth"]["56.4S 6.1E"] = GorgorothCoords(-56.4, 6.1);
 mapdata["Gorgoroth"]["58.2S 4.6E"] = GorgorothCoords(-58.2, 4.6);
 mapdata["Gorgoroth"]["64.9S 8.8E"] = GorgorothCoords(-64.9, 8.8);
 mapdata["Gorgoroth"]["64.2S 10.7E"] = GorgorothCoords(-64.2, 10.7);
 
+-- rare caches Talath Urui
 mapdata["Gorgoroth"]["53.7S 10.1E"] = GorgorothCoords(-53.7, 10.1);
 mapdata["Gorgoroth"]["58.8S 18.3E"] = GorgorothCoords(-58.8, 18.3);
 mapdata["Gorgoroth"]["58.8S 24.2E"] = GorgorothCoords(-58.8, 24.2);
 mapdata["Gorgoroth"]["64.3S 19.4E"] = GorgorothCoords(-64.3, 19.4);
 mapdata["Gorgoroth"]["58.8S 25.3E"] = GorgorothCoords(-58.8, 25.3);
 
+-- rare caches Agarnaith
 mapdata["Gorgoroth"]["53.8S 25.1E"] = GorgorothCoords(-53.8, 25.1);
 mapdata["Gorgoroth"]["49.0S 33,0E"] = GorgorothCoords(-49.0, 33.0);
 mapdata["Gorgoroth"]["48.3S 34.1E"] = GorgorothCoords(-48.3, 34.1);
 mapdata["Gorgoroth"]["48.3S 32.9E"] = GorgorothCoords(-48.3, 32.9);
 mapdata["Gorgoroth"]["46.4S 34.1E"] = GorgorothCoords(-46.4, 34.1);
+
+-- regular caches Udun
+mapdata["Gorgoroth"]["41.8S 3.8E"] = GorgorothCoords(-41.9, 3.8);
+mapdata["Gorgoroth"]["40.8S 0.2E"] = GorgorothCoords(-40.8, 0.2);
+mapdata["Gorgoroth"]["43.8S-2.0E"] = GorgorothCoords(-43.8, 2.0);
+mapdata["Gorgoroth"]["44.4S-0.1W"] = GorgorothCoords(-44.4, -0.1);
+mapdata["Gorgoroth"]["45.8S-1.4E"] = GorgorothCoords(-45.8, 1.4);
+mapdata["Gorgoroth"]["44.1S-8.8E"] = GorgorothCoords(-44.1, 8.8);
+mapdata["Gorgoroth"]["41.1S-7.8E"] = GorgorothCoords(-41.1, 7.8);
+mapdata["Gorgoroth"]["41.3S-4.0E"] = GorgorothCoords(-41.3, 4.0);
+mapdata["Gorgoroth"]["45.5S-6.1E"] = GorgorothCoords(-45.5, 6.1);
+mapdata["Gorgoroth"]["45.9S-1.4W"] = GorgorothCoords(-45.9, -1.4);
+mapdata["Gorgoroth"]["43.4S-1.8W"] = GorgorothCoords(-43.4, -1.8);
+mapdata["Gorgoroth"]["45.6S-2.5E"] = GorgorothCoords(-45.6, 2.5);
+-- regular caches Dor Armath
+mapdata["Gorgoroth"]["50.9S-8.4E"] = GorgorothCoords(-50.9, 8.4);
+mapdata["Gorgoroth"]["51.6S-11.7E"] = GorgorothCoords(-51.6, 11.7);
+mapdata["Gorgoroth"]["45.6S-13.8E"] = GorgorothCoords(-45.6, 13.8);
+mapdata["Gorgoroth"]["43.9S-23.8E"] = GorgorothCoords(-43.9, 23.8);
+mapdata["Gorgoroth"]["46.1S-24.4E"] = GorgorothCoords(-46.1, 24.4);
+mapdata["Gorgoroth"]["46.2S-23.7E"] = GorgorothCoords(-46.2, 23.7);
+mapdata["Gorgoroth"]["51.5S-13.5E"] = GorgorothCoords(-51.5, 13.5);
+mapdata["Gorgoroth"]["47.9S-15.9E"] = GorgorothCoords(-47.9, 15.9);
+mapdata["Gorgoroth"]["48.5S-16.1E"] = GorgorothCoords(-48.5, 16.1);
+mapdata["Gorgoroth"]["47.7S-20.8E"] = GorgorothCoords(-47.7, 20.8);
+mapdata["Gorgoroth"]["49.0S-16.2E"] = GorgorothCoords(-49.0, 16.2);
+mapdata["Gorgoroth"]["48.3S-20.1E"] = GorgorothCoords(-48.3, 20.1);
+-- regular caches Lhingris
+mapdata["Gorgoroth"]["55.9S-5.6E"] = GorgorothCoords(-55.9, 5.6);
+mapdata["Gorgoroth"]["47.3S-5.6E"] = GorgorothCoords(-47.3, 5.6);
+mapdata["Gorgoroth"]["49.3S-1.7E"] = GorgorothCoords(-49.3, 1.7);
+mapdata["Gorgoroth"]["49.5S-4.9E"] = GorgorothCoords(-49.5, 4.9);
+mapdata["Gorgoroth"]["51.7S-5.0E"] = GorgorothCoords(-51.7, 5.0);
+mapdata["Gorgoroth"]["52.4S-4.3E"] = GorgorothCoords(-52.4, 4.3);
+mapdata["Gorgoroth"]["53.3S-7.2E"] = GorgorothCoords(-53.3, 7.2);
+mapdata["Gorgoroth"]["58.7S-7.5E"] = GorgorothCoords(-58.7, 7.5);
+mapdata["Gorgoroth"]["65.4S-12.7E"] = GorgorothCoords(-65.4, 12.7);
+mapdata["Gorgoroth"]["61.0S-10.6E"] = GorgorothCoords(-61.0, 10.6);
+mapdata["Gorgoroth"]["55.7S-6.5E"] = GorgorothCoords(-55.7, 6.5);
+mapdata["Gorgoroth"]["48.8S-6.5E"] = GorgorothCoords(-48.8, 6.5);
+-- regular caches Talath Urui
+mapdata["Gorgoroth"]["64.0S-21.2E"] = GorgorothCoords(-64.0, 21.2);
+mapdata["Gorgoroth"]["62.9S-25.0E"] = GorgorothCoords(-62.9, 25.0);
+mapdata["Gorgoroth"]["62.9S-23.8E"] = GorgorothCoords(-62.9, 23.8);
+mapdata["Gorgoroth"]["61.7S-22.7E"] = GorgorothCoords(-61.7, 22.7);
+mapdata["Gorgoroth"]["61.8S-15.5E"] = GorgorothCoords(-61.8, 15.5);
+mapdata["Gorgoroth"]["55.5S-16.4E"] = GorgorothCoords(-55.5, 16.4);
+mapdata["Gorgoroth"]["58.5S-23.4E"] = GorgorothCoords(-58.5, 23.4);
+mapdata["Gorgoroth"]["57.7S-25.2E"] = GorgorothCoords(-57.7, 25.2);
+mapdata["Gorgoroth"]["58.8S-20.6E"] = GorgorothCoords(-58.8, 20.6);
+mapdata["Gorgoroth"]["57.1S-19.9E"] = GorgorothCoords(-57.1, 19.9);
+mapdata["Gorgoroth"]["57.3S-19.1E"] = GorgorothCoords(-57.3, 19.1);
+mapdata["Gorgoroth"]["54.7S-15.1E"] = GorgorothCoords(-54.7, 15.1);
+-- regular caches Agarnaith
+mapdata["Gorgoroth"]["55.3S-24.5E"] = GorgorothCoords(-55.3, 24.5);
+mapdata["Gorgoroth"]["54.5S-25.0E"] = GorgorothCoords(-54.5, 25.0);
+mapdata["Gorgoroth"]["49.7S-28.7E"] = GorgorothCoords(-49.7, 28.7);
+mapdata["Gorgoroth"]["48.8S-30.3E"] = GorgorothCoords(-48.8, 30.3);
+mapdata["Gorgoroth"]["49.0S-28.1E"] = GorgorothCoords(-49.0, 28.1);
+mapdata["Gorgoroth"]["49.1S-33.0E"] = GorgorothCoords(-49.1, 33.0);
+mapdata["Gorgoroth"]["51.2S-32.7E"] = GorgorothCoords(-51.2, 32.7);
+mapdata["Gorgoroth"]["49.3S-34.6E"] = GorgorothCoords(-49.3, 34.6);
+mapdata["Gorgoroth"]["46.5S-36.7E"] = GorgorothCoords(-46.5, 36.7);
+mapdata["Gorgoroth"]["45.9S-33.5E"] = GorgorothCoords(-45.9, 33.5);
+mapdata["Gorgoroth"]["47.5S-33.4E"] = GorgorothCoords(-47.5, 33.4);
+mapdata["Gorgoroth"]["48.1S-32.2E"] = GorgorothCoords(-48.1, 32.2);
 
 NMirkwoodCoords = Coords(37.4, -56.6, 5.3, -13.8);
 mapdata["Northern Mirkwood"]={};
