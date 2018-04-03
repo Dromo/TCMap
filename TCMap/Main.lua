@@ -4,13 +4,13 @@ import "Turbine.UI.Lotro";
 import "Drono.TCMap";
 
 locale = "en";
---if Turbine.Engine:GetLanguage() == Turbine.Language.German then
---	locale = "de"
+if Turbine.Engine:GetLanguage() == Turbine.Language.German then
+	locale = "de"
 --elseif Turbine.Engine:GetLanguage() == Turbine.Language.French then
 --	locale = "fr"
 --elseif Turbine.Engine:GetLanguage() == Turbine.Language.Russian then
 --	locale = "en"
---end
+end
 
 wx,wy,wvis,tx,ty,chan,targ,getdata,locklist,activemap = 100,0,true,50,100,5,"",false,{},1; -- standard settings
 -- load settings
