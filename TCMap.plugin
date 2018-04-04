@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <Plugin>
-	<Information>
-		<Name>TCMap</Name>
-		<Author>Drono</Author>
-		<Version>0.1</Version>
-		<Description>
+    <Information>
+        <Name>TCMap</Name>
+        <Author>Drono</Author>
+        <Version>0.1</Version>
+        <Description>
         <![CDATA[
 This plugin is modification of RTPlugin by Math
 
@@ -17,7 +17,7 @@ Fuctions:
 - Button to show where you are on the map.
 - Ctrl+click a location to send the coordinates of the next target.
 - Alt+click a location to use the Waypoint plugin with the coordinates.]]></Description>
-	</Information>
-	<Package>Drono.TCMap.Main</Package>
+    </Information>
+    <Package>Drono.TCMap.Main</Package>
         <Configuration Apartment="TCMap" />
 </Plugin>
