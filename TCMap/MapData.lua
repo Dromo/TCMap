@@ -228,35 +228,117 @@ mapdata["North Ithilien"]["45.9S 15.2W"] = NorthIthilienCoords(-45.9, -15.2);
 GorgorothCoords = Coords(-35.4, -5.9, -69.4, 39.5);
 mapdata["Gorgoroth"]={}
 mapdata["Gorgorothc"] = GorgorothCoords;
+-- rare caches Udun
 mapdata["Gorgoroth"]["43.9S 0.7E"] = GorgorothCoords(-43.9, 0.7);
 mapdata["Gorgoroth"]["44.1S 0.1E"] = GorgorothCoords(-44.1, 0.1);
 mapdata["Gorgoroth"]["47.0S 3.2E"] = GorgorothCoords(-47.0, 3.2);
 mapdata["Gorgoroth"]["41.7S 4.0E"] = GorgorothCoords(-41.7, 4.0);
 mapdata["Gorgoroth"]["43.6S 8.7E"] = GorgorothCoords(-43.6, 8.7);
-
+-- rare caches Dor Armath
 mapdata["Gorgoroth"]["51.3S 11.5E"] = GorgorothCoords(-51.3, 11.5);
 mapdata["Gorgoroth"]["51.1S 13.6E"] = GorgorothCoords(-51.1, 13.6);
 mapdata["Gorgoroth"]["46.7S 12.6E"] = GorgorothCoords(-46.7, 12.6);
 mapdata["Gorgoroth"]["52.1S 17.0E"] = GorgorothCoords(-52.1, 17.0);
 mapdata["Gorgoroth"]["47.4S 18.9E"] = GorgorothCoords(-47.4, 18.9);
-
+-- rare caches Lhingris
 mapdata["Gorgoroth"]["55.0S 8.0E"] = GorgorothCoords(-55.0, 8.0);
 mapdata["Gorgoroth"]["56.4S 6.1E"] = GorgorothCoords(-56.4, 6.1);
 mapdata["Gorgoroth"]["58.2S 4.6E"] = GorgorothCoords(-58.2, 4.6);
 mapdata["Gorgoroth"]["64.9S 8.8E"] = GorgorothCoords(-64.9, 8.8);
 mapdata["Gorgoroth"]["64.2S 10.7E"] = GorgorothCoords(-64.2, 10.7);
-
+-- rare caches Talath Urui
 mapdata["Gorgoroth"]["53.7S 10.1E"] = GorgorothCoords(-53.7, 10.1);
 mapdata["Gorgoroth"]["58.8S 18.3E"] = GorgorothCoords(-58.8, 18.3);
 mapdata["Gorgoroth"]["58.8S 24.2E"] = GorgorothCoords(-58.8, 24.2);
 mapdata["Gorgoroth"]["64.3S 19.4E"] = GorgorothCoords(-64.3, 19.4);
 mapdata["Gorgoroth"]["58.8S 25.3E"] = GorgorothCoords(-58.8, 25.3);
-
+-- rare caches Agarnaith
 mapdata["Gorgoroth"]["53.8S 25.1E"] = GorgorothCoords(-53.8, 25.1);
 mapdata["Gorgoroth"]["49.0S 33,0E"] = GorgorothCoords(-49.0, 33.0);
 mapdata["Gorgoroth"]["48.3S 34.1E"] = GorgorothCoords(-48.3, 34.1);
 mapdata["Gorgoroth"]["48.3S 32.9E"] = GorgorothCoords(-48.3, 32.9);
 mapdata["Gorgoroth"]["46.4S 34.1E"] = GorgorothCoords(-46.4, 34.1);
+
+-- regular caches Udun
+UdunCoords = Coords(-36.7, -4.3, -49, 12);
+mapdata["Udun"]={};
+mapdata["Udunc"] = UdunCoords;
+mapdata["Udun"]["41.8S 3.8E"] = UdunCoords(-41.9, 3.8);
+mapdata["Udun"]["40.8S 0.2E"] = UdunCoords(-40.8, 0.2);
+mapdata["Udun"]["43.8S 2.0E"] = UdunCoords(-43.8, 2.0);
+mapdata["Udun"]["44.4S 0.1W"] = UdunCoords(-44.4, -0.1);
+mapdata["Udun"]["45.8S 1.4E"] = UdunCoords(-45.8, 1.4);
+mapdata["Udun"]["44.1S 8.8E"] = UdunCoords(-44.1, 8.8);
+mapdata["Udun"]["41.1S 7.8E"] = UdunCoords(-41.1, 7.8);
+mapdata["Udun"]["41.3S 4.0E"] = UdunCoords(-41.3, 4.0);
+mapdata["Udun"]["45.5S 6.1E"] = UdunCoords(-45.5, 6.1);
+mapdata["Udun"]["45.9S 1.4W"] = UdunCoords(-45.9, -1.4);
+mapdata["Udun"]["43.4S 1.8W"] = UdunCoords(-43.4, -1.8);
+mapdata["Udun"]["45.6S 2.5E"] = UdunCoords(-45.6, 2.5);
+-- regular caches Dor Amarth
+DorAmarthCoords = Coords(-37.1, 5.9, -54.6, 29.3);
+mapdata["Dor Amarth"]={};
+mapdata["Dor Amarthc"] = DorAmarthCoords;
+mapdata["Dor Amarth"]["50.9S 8.4E"] = DorAmarthCoords(-50.9, 8.4);
+mapdata["Dor Amarth"]["51.6S 11.7E"] = DorAmarthCoords(-51.6, 11.7);
+mapdata["Dor Amarth"]["45.6S 13.8E"] = DorAmarthCoords(-45.6, 13.8);
+mapdata["Dor Amarth"]["43.9S 23.8E"] = DorAmarthCoords(-43.9, 23.8);
+mapdata["Dor Amarth"]["46.1S 24.4E"] = DorAmarthCoords(-46.1, 24.4);
+mapdata["Dor Amarth"]["46.2S 23.7E"] = DorAmarthCoords(-46.2, 23.7);
+mapdata["Dor Amarth"]["51.5S 13.5E"] = DorAmarthCoords(-51.5, 13.5);
+mapdata["Dor Amarth"]["47.9S 15.9E"] = DorAmarthCoords(-47.9, 15.9);
+mapdata["Dor Amarth"]["48.5S 16.1E"] = DorAmarthCoords(-48.5, 16.1);
+mapdata["Dor Amarth"]["47.7S 20.8E"] = DorAmarthCoords(-47.7, 20.8);
+mapdata["Dor Amarth"]["49.0S 16.2E"] = DorAmarthCoords(-49.0, 16.2);
+mapdata["Dor Amarth"]["48.3S 20.1E"] = DorAmarthCoords(-48.3, 20.1);
+-- regular caches Lhingris
+LhingrisCoords = Coords(-45.0, -6.5, -66.9, 22.7);
+mapdata["Lhingris"]={};
+mapdata["Lhinfrisc"] = LhingrisCoords;
+mapdata["Lhingris"]["55.9S 5.6E"] = LhingrisCoords(-55.9, 5.6);
+mapdata["Lhingris"]["47.3S 5.6E"] = LhingrisCoords(-47.3, 5.6);
+mapdata["Lhingris"]["49.3S 1.7E"] = LhingrisCoords(-49.3, 1.7);
+mapdata["Lhingris"]["49.5S 4.9E"] = LhingrisCoords(-49.5, 4.9);
+mapdata["Lhingris"]["51.7S 5.0E"] = LhingrisCoords(-51.7, 5.0);
+mapdata["Lhingris"]["52.4S 4.3E"] = LhingrisCoords(-52.4, 4.3);
+mapdata["Lhingris"]["53.3S 7.2E"] = LhingrisCoords(-53.3, 7.2);
+mapdata["Lhingris"]["58.7S 7.5E"] = LhingrisCoords(-58.7, 7.5);
+mapdata["Lhingris"]["65.4S 12.7E"] = LhingrisCoords(-65.4, 12.7);
+mapdata["Lhingris"]["61.0S 10.6E"] = LhingrisCoords(-61.0, 10.6);
+mapdata["Lhingris"]["55.7S 6.5E"] = LhingrisCoords(-55.7, 6.5);
+mapdata["Lhingris"]["48.8S 6.5E"] = LhingrisCoords(-48.8, 6.5);
+-- regular caches Talath Urui
+TalathUruiCoords = Coords(-47.9, 6.7, -66, 30.8);
+mapdata["Talath Urui"]={};
+mapdata["Talath Uruic"] = TalathUruiCoords;
+mapdata["Talath Urui"]["64.0S 21.2E"] = TalathUruiCoords(-64.0, 21.2);
+mapdata["Talath Urui"]["62.9S 25.0E"] = TalathUruiCoords(-62.9, 25.0);
+mapdata["Talath Urui"]["62.9S 23.8E"] = TalathUruiCoords(-62.9, 23.8);
+mapdata["Talath Urui"]["61.7S 22.7E"] = TalathUruiCoords(-61.7, 22.7);
+mapdata["Talath Urui"]["61.8S 15.5E"] = TalathUruiCoords(-61.8, 15.5);
+mapdata["Talath Urui"]["55.5S 16.4E"] = TalathUruiCoords(-55.5, 16.4);
+mapdata["Talath Urui"]["58.5S 23.4E"] = TalathUruiCoords(-58.5, 23.4);
+mapdata["Talath Urui"]["57.7S 25.2E"] = TalathUruiCoords(-57.7, 25.2);
+mapdata["Talath Urui"]["58.8S 20.6E"] = TalathUruiCoords(-58.8, 20.6);
+mapdata["Talath Urui"]["57.1S 19.9E"] = TalathUruiCoords(-57.1, 19.9);
+mapdata["Talath Urui"]["57.3S 19.1E"] = TalathUruiCoords(-57.3, 19.1);
+mapdata["Talath Urui"]["54.7S 15.1E"] = TalathUruiCoords(-54.7, 15.1);
+-- regular caches Agarnaith
+AgarnaithCoords = Coords(41.9, 18.2, 58, 39.8);
+mapdata["Agarnaith"]={};
+mapdata["Agarnaithc"] = AgarnaithCoords;
+mapdata["Agarnaith"]["55.3S 24.5E"] = AgarnaithCoords(-55.3, 24.5);
+mapdata["Agarnaith"]["54.5S 25.0E"] = AgarnaithCoords(-54.5, 25.0);
+mapdata["Agarnaith"]["49.7S 28.7E"] = AgarnaithCoords(-49.7, 28.7);
+mapdata["Agarnaith"]["48.8S 30.3E"] = AgarnaithCoords(-48.8, 30.3);
+mapdata["Agarnaith"]["49.0S 28.1E"] = AgarnaithCoords(-49.0, 28.1);
+mapdata["Agarnaith"]["49.1S 33.0E"] = AgarnaithCoords(-49.1, 33.0);
+mapdata["Agarnaith"]["51.2S 32.7E"] = AgarnaithCoords(-51.2, 32.7);
+mapdata["Agarnaith"]["49.3S 34.6E"] = AgarnaithCoords(-49.3, 34.6);
+mapdata["Agarnaith"]["46.5S 36.7E"] = AgarnaithCoords(-46.5, 36.7);
+mapdata["Agarnaith"]["45.9S 33.5E"] = AgarnaithCoords(-45.9, 33.5);
+mapdata["Agarnaith"]["47.5S 33.4E"] = AgarnaithCoords(-47.5, 33.4);
+mapdata["Agarnaith"]["48.1S 32.2E"] = AgarnaithCoords(-48.1, 32.2);
 
 NMirkwoodCoords = Coords(37.4, -56.6, 5.3, -13.8);
 mapdata["Northern Mirkwood"]={};

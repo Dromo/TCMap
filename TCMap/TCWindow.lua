@@ -95,7 +95,7 @@ function TCWindow:Constructor()
 
     self:SetText( "Treasure Cache" );
     self:SetSize( 800,750 );
-    self.nrMaps = 13;
+    self.nrMaps = 18;
     self.activeMap = 1;
         
     self.bottomBar = Turbine.UI.Control();
@@ -113,8 +113,13 @@ function TCWindow:Constructor()
     self.mapsBg[9] = mapBg( "Eastern Gondor", self );
     self.mapsBg[10] = mapBg( "Far Anorien", self );
     self.mapsBg[11] = mapBg( "North Ithilien", self);
-    self.mapsBg[12] = mapBg( "Gorgoroth", self );
-    self.mapsBg[13] = mapBg( "Northern Mirkwood", self );
+    self.mapsBg[12] = mapBg( "Udun", self);
+    self.mapsBg[13] = mapBg( "Dor Amarth", self);
+    self.mapsBg[14] = mapBg( "Lhingris", self);
+    self.mapsBg[15] = mapBg( "Talath Urui", self);
+    self.mapsBg[16] = mapBg( "Agarnaith", self);
+    self.mapsBg[17] = mapBg( "Gorgoroth", self );
+    self.mapsBg[18] = mapBg( "Northern Mirkwood", self );
     
     self.maps = {};
     self.maps[1] = MapControl("Angmar", self );
@@ -128,8 +133,13 @@ function TCWindow:Constructor()
     self.maps[9] = MapControl("Eastern Gondor", self );
     self.maps[10] = MapControl("Far Anorien", self );
     self.maps[11] = MapControl("North Ithilien", self );
-    self.maps[12] = MapControl("Gorgoroth", self );
-    self.maps[13] = MapControl("Northern Mirkwood", self );
+    self.maps[12] = MapControl("Udun", self );
+    self.maps[13] = MapControl("Dor Amarth", self );
+    self.maps[14] = MapControl("Lhingris", self );
+    self.maps[15] = MapControl("Talath Urui", self );
+    self.maps[16] = MapControl("Agarnaith", self );
+    self.maps[17] = MapControl("Gorgoroth", self );
+    self.maps[18] = MapControl("Northern Mirkwood", self );
 
     self.tabs = {};
     self.tabs[1] = TabButton(strings[locale]["Angmar"],strings[locale]["Angmarw"],20,Turbine.UI.Color(1,0.8,0,0));
@@ -143,8 +153,13 @@ function TCWindow:Constructor()
     self.tabs[9] = TabButton(strings[locale]["Eastern Gondors"],45,20,Turbine.UI.Color(1,0,0.6,0.45));
     self.tabs[10] = TabButton(strings[locale]["Far Anoriens"],45,20,Turbine.UI.Color.SteelBlue);
     self.tabs[11] = TabButton(strings[locale]["North Ithiliens"],45,20,Turbine.UI.Color.LawnGreen);
-    self.tabs[12] = TabButton(strings[locale]["Gorgoroths"],45,20,Turbine.UI.Color.DarkSlateGray);
-    self.tabs[13] = TabButton(strings[locale]["Northern Mirkwoods"],45,20,Turbine.UI.Color.Green);
+    self.tabs[12] = TabButton(strings[locale]["Uduns"],45,20,Turbine.UI.Color.Teal);
+    self.tabs[13] = TabButton(strings[locale]["Dor Amarths"],45,20,Turbine.UI.Color.Teal);
+    self.tabs[14] = TabButton(strings[locale]["Lhingriss"],45,20,Turbine.UI.Color.Teal);
+    self.tabs[15] = TabButton(strings[locale]["Talath Uruis"],45,20,Turbine.UI.Color.Teal);
+    self.tabs[16] = TabButton(strings[locale]["Agarnaiths"],45,20,Turbine.UI.Color.Teal);
+    self.tabs[17] = TabButton(strings[locale]["Gorgoroths"],45,20,Turbine.UI.Color.DarkSlateGray);
+    self.tabs[18] = TabButton(strings[locale]["Northern Mirkwoods"],45,20,Turbine.UI.Color.Green);
 
     for i=1,self.nrMaps do
         self.tabs[i]:SetParent( self );
