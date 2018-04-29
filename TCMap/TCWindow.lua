@@ -283,7 +283,7 @@ function SetActiveMap( rtrun, i )
         rtrun.maps[rtrun.activeMap]:SetVisible( true );
         rtrun.maps[rtrun.activeMap]:SetMakeQS( true );
         rtrun.tabs[rtrun.activeMap]:SetFront( true );
-        rtrun.tabs[rtrun.activeMap]:SetWidth( strings[locale][rtrun.maps[rtrun.activeMap].location.."w"] );
+        rtrun.tabs[rtrun.activeMap]:SetWidth( 0 );
         rtrun.tabs[rtrun.activeMap]:SetText( strings[locale][rtrun.maps[rtrun.activeMap].location] );
         rtrun.mapsBg[rtrun.activeMap]:SetVisible( true );
         rtrun.closeb:SetParent( rtrun.maps[rtrun.activeMap] );
