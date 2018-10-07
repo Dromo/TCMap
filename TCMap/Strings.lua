@@ -17,6 +17,8 @@ strings["Talath Urui"] = 0x411b9590;
 strings["Agarnaith"] = 0x411b958c;
 strings["Gorgoroth"] = 0x411b84d4;
 strings["Northern Mirkwood"] = 0x411c2de2;
+strings["Ered Mithrin"] = 0x411c8da9;
+strings["Iron Hills"] = 0x411c8da9;
 
 strings["lock"]= 0x410001d0;
 strings["unlock"]= 0x410001d3;
@@ -78,6 +80,12 @@ strings["en"]["Agarnaithw"]=85;
 strings["en"]["Dor Amarth"]="Dor Amarth";
 strings["en"]["Dor Amarths"]="DorAma";
 strings["en"]["Dor Amarthw"]=100;
+strings["en"]["Ered Mithrin"] = "Ered Mithrin";
+strings["en"]["Ered Mithrins"] = "EMithrin";
+strings["en"]["Ered Mithrinw"] = 110;
+strings["en"]["Iron Hills"] = "Iron Hills";
+strings["en"]["Iron Hillss"] = "Iron Hills";
+strings["en"]["Iron Hillsw"] = 110;
 
 strings["en"]["sendtext"]="Send locations to";
 strings["en"]["send"]="Send";

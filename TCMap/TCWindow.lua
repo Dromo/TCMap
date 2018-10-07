@@ -95,7 +95,7 @@ function TCWindow:Constructor()
 
     self:SetText( "Treasure Cache" );
     self:SetSize( 800,750 );
-    self.nrMaps = 18;
+    self.nrMaps = 20;
     self.activeMap = 1;
         
     self.bottomBar = Turbine.UI.Control();
@@ -120,6 +120,8 @@ function TCWindow:Constructor()
     self.mapsBg[16] = mapBg( "Agarnaith", self);
     self.mapsBg[17] = mapBg( "Gorgoroth", self );
     self.mapsBg[18] = mapBg( "Northern Mirkwood", self );
+    self.mapsBg[19] = mapBg( "Ered Mithrin", self );
+    self.mapsBg[20] = mapBg( "Iron Hills", self );
     
     self.maps = {};
     self.maps[1] = MapControl("Angmar", self );
@@ -140,6 +142,8 @@ function TCWindow:Constructor()
     self.maps[16] = MapControl("Agarnaith", self );
     self.maps[17] = MapControl("Gorgoroth", self );
     self.maps[18] = MapControl("Northern Mirkwood", self );
+    self.maps[19] = MapControl("Ered Mithrin", self );
+    self.maps[20] = MapControl("Iron Hills", self );
 
     self.tabs = {};
     self.tabs[1] = TabButton(strings[locale]["Angmar"],45,20,Turbine.UI.Color(1,0.8,0,0));
@@ -162,6 +166,8 @@ function TCWindow:Constructor()
     self.tabs[16] = TabButton(strings[locale]["Agarnaiths"],45,20,Turbine.UI.Color.Teal);
     self.tabs[17] = TabButton(strings[locale]["Gorgoroths"],45,20,Turbine.UI.Color.DarkSlateGray);
     self.tabs[18] = TabButton(strings[locale]["Northern Mirkwoods"],45,20,Turbine.UI.Color.Green);
+    self.tabs[19] = TabButton(strings[locale]["Ered Mithrins"],45,20,Turbine.UI.Color.AliceBlue);
+    self.tabs[20] = TabButton(strings[locale]["Iron Hillss"],45,20,Turbine.UI.Color.SlateBlue);
 
     for i=1,self.nrMaps do
         self.tabs[i]:SetParent( self );

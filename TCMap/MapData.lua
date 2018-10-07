@@ -364,3 +364,33 @@ mapdata["Northern Mirkwood"]["21.1N 35.2W"] = NMirkwoodCoords(21.1, -35.2);
 mapdata["Northern Mirkwood"]["25.6N 21.4W"] = NMirkwoodCoords(25.6, -21.4);
 mapdata["Northern Mirkwood"]["17.1N 23.1W"] = NMirkwoodCoords(17.1, -23.1);
 
+-- Dwarf-hold
+EredMithrinCoords = Coords(46.4, -57.2, 27.2, -31.6);
+mapdata["Ered Mithrin"]={};
+mapdata["Ered Mithrinc"] = EredMithrinCoords;
+mapdata["Ered Mithrin"]["30.1N 32.3W"] = EredMithrinCoords(30.1, -32.3);
+mapdata["Ered Mithrin"]["31.4N 35.3W"] = EredMithrinCoords(31.4, -35.3);
+mapdata["Ered Mithrin"]["30.2N 49.7W"] = EredMithrinCoords(30.2, -49.7);
+mapdata["Ered Mithrin"]["33.1N 56.1W"] = EredMithrinCoords(33.1, -56.1);
+mapdata["Ered Mithrin"]["36.2N 53.6W"] = EredMithrinCoords(36.2, -53.6);
+mapdata["Ered Mithrin"]["39.2N 54.0W"] = EredMithrinCoords(39.2, -54.0);
+mapdata["Ered Mithrin"]["36.5N 44.0W"] = EredMithrinCoords(36.5, -44.0);
+mapdata["Ered Mithrin"]["31.9N 49.0W"] = EredMithrinCoords(31.9, -49.0);
+mapdata["Ered Mithrin"]["33.4N 42.1W"] = EredMithrinCoords(33.4, -42.1);
+mapdata["Ered Mithrin"]["35.2N 40.0W"] = EredMithrinCoords(35.2, -40.0);
+mapdata["Ered Mithrin"]["43.5N 34.6W"] = EredMithrinCoords(43.5, -34.6);
+mapdata["Ered Mithrin"]["34.1N 50.1W"] = EredMithrinCoords(34.1, -50.1);
+
+IronHillsCoords = Coords(33.4, -23.6, 16.8, -1.5);
+mapdata["Iron Hills"]={};
+mapdata["Iron Hillsc"] = IronHillsCoords;
+mapdata["Iron Hills"]["27.5N 17.3W"] = IronHillsCoords(27.5, -17.3);
+mapdata["Iron Hills"]["27.8N 12.7W"] = IronHillsCoords(27.8, -12.7);
+mapdata["Iron Hills"]["22.0N 11.6W"] = IronHillsCoords(22.0, -11.6);
+mapdata["Iron Hills"]["24.2N 9.5W"] = IronHillsCoords(24.2, -9.5);
+mapdata["Iron Hills"]["22.9N 8.8W"] = IronHillsCoords(22.9, -8.8);
+mapdata["Iron Hills"]["25.0N 5.3W"] = IronHillsCoords(25.0, -5.3);
+mapdata["Iron Hills"]["26.4N 4.6W"] = IronHillsCoords(26.4, -4.6);
+mapdata["Iron Hills"]["27.9N 4.7W"] = IronHillsCoords(27.9, -4.7);
+mapdata["Iron Hills"]["28.6N 5.0W"] = IronHillsCoords(28.6, -5.0);
+mapdata["Iron Hills"]["29.0N 6.8W"] = IronHillsCoords(29.0, -6.8);
