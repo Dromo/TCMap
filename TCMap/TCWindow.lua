@@ -7,7 +7,7 @@ local function mapBg( location, parent )
     local bg = Turbine.UI.Control();
     bg:SetParent( parent );
     bg:SetSize( 800, 600 );
-    bg:SetPosition( 0, 20 );
+    bg:SetPosition( 0, 40 );
     bg:SetBackground( strings[location] );
     bg:SetStretchMode( 2 );
     bg:SetVisible( false );
@@ -142,7 +142,7 @@ function TCWindow:Constructor()
     self.maps[18] = MapControl("Northern Mirkwood", self );
 
     self.tabs = {};
-    self.tabs[1] = TabButton(strings[locale]["Angmar"],strings[locale]["Angmarw"],20,Turbine.UI.Color(1,0.8,0,0));
+    self.tabs[1] = TabButton(strings[locale]["Angmar"],45,20,Turbine.UI.Color(1,0.8,0,0));
     self.tabs[2] = TabButton(strings[locale]["Evendims"],45,20,Turbine.UI.Color(1,0.5,0.5,0.5));
     self.tabs[3] = TabButton(strings[locale]["Forochels"],45,20,Turbine.UI.Color(1,0,0,1));
     self.tabs[4] = TabButton(strings[locale]["Misty Mountainss"],45,20,Turbine.UI.Color(1,0.8,0.5,0));
@@ -150,9 +150,11 @@ function TCWindow:Constructor()
     self.tabs[6] = TabButton(strings[locale]["Southern Mirkwoods"],45,20,Turbine.UI.Color(1,0.8,0.8,0));
     self.tabs[7] = TabButton(strings[locale]["Western Gondors"],45,20,Turbine.UI.Color(1,0.2,0.8,0));
     self.tabs[8] = TabButton(strings[locale]["Central Gondors"],45,20,Turbine.UI.Color(1,0.4,0,1));
+    -- one line if full names
     self.tabs[9] = TabButton(strings[locale]["Eastern Gondors"],45,20,Turbine.UI.Color(1,0,0.6,0.45));
     self.tabs[10] = TabButton(strings[locale]["Far Anoriens"],45,20,Turbine.UI.Color.SteelBlue);
     self.tabs[11] = TabButton(strings[locale]["North Ithiliens"],45,20,Turbine.UI.Color.LawnGreen);
+    --
     self.tabs[12] = TabButton(strings[locale]["Uduns"],45,20,Turbine.UI.Color.Teal);
     self.tabs[13] = TabButton(strings[locale]["Dor Amarths"],45,20,Turbine.UI.Color.Teal);
     self.tabs[14] = TabButton(strings[locale]["Lhingriss"],45,20,Turbine.UI.Color.Teal);
@@ -164,12 +166,14 @@ function TCWindow:Constructor()
     for i=1,self.nrMaps do
         self.tabs[i]:SetParent( self );
         self.maps[i]:SetParent( self );
-        self.maps[i]:SetPosition( 0,20 );
+        self.maps[i]:SetPosition( 0,40 );
         self.maps[i]:SetVisible( false );
         if i==1 then
             self.tabs[i]:SetPosition( 0,0 );
+        elseif i==12 then
+            self.tabs[i]:SetPosition( 0,20 );
         else
-            self.tabs[i]:SetPosition( self.tabs[i-1]:GetLeft()+self.tabs[i-1]:GetWidth(),0 );
+            self.tabs[i]:SetPosition( self.tabs[i-1]:GetLeft()+self.tabs[i-1]:GetWidth(),self.tabs[i-1]:GetTop() );
         end
         self.tabs[i].MouseClick = function()
             SetActiveMap( self, i );
@@ -194,15 +198,15 @@ function TCWindow:Constructor()
     
     self.bottomBar:SetBackColor( Turbine.UI.Color(0.9,0,0,0) );
     self.bottomBar:SetSize( 800,30);
-    self.bottomBar:SetPosition( 0,620 );
+    self.bottomBar:SetPosition( 0,640 );
     self.attachDragListener(self.bottomBar);
 
     self.resetButton = Turbine.UI.Lotro.Button();
     self.resetButton:SetText( strings[locale]["clear"] );
     self.resetButton:SetSize( 135,20 );
-    self.resetButton:SetParent( self );
+    self.resetButton:SetParent( self.bottomBar );
     self.resetButton:SetZOrder( self.bottomBar:GetZOrder()+1 );
-    self.resetButton:SetPosition( 5,625 );
+    self.resetButton:SetPosition( 5,5 );
     self.resetButton.MouseClick=function()
         for i=1,self.nrMaps do
             self.maps[i]:SetMarked( {} );
@@ -213,12 +217,12 @@ function TCWindow:Constructor()
     self.sendLabel:SetText( strings[locale]["sendtext"] );
     self.sendLabel:SetSize( 165,20 );
     self.sendLabel:SetTextAlignment( Turbine.UI.ContentAlignment.MiddleRight );
-    self.sendLabel:SetParent( self );
+    self.sendLabel:SetParent( self.bottomBar );
     self.sendLabel:SetZOrder( self.bottomBar:GetZOrder()+1 );
-    self.sendLabel:SetPosition( 145,625 );
+    self.sendLabel:SetPosition( 145,5 );
     
     self.channelList = DropDownList();
-    self.channelList:SetParent( self.maps[self.activeMap] );
+    self.channelList:SetParent( self.bottomBar );
     if locale=="fr" then -- slight movement in case of french, since some labels are bigger
         moveleft = 12
     else
@@ -236,16 +240,16 @@ function TCWindow:Constructor()
 
     self.target = Turbine.UI.Lotro.TextBox();
     self.target:SetSize( 150-moveleft,29 );
-    self.target:SetParent( self );
+    self.target:SetParent( self.bottomBar );
     self.target:SetTextAlignment( Turbine.UI.ContentAlignment.MiddleLeft );
     self.target:SetZOrder( self.bottomBar:GetZOrder()+1 );
-    self.target:SetPosition( 425-moveleft,621 );
+    self.target:SetPosition( 425-moveleft,1 );
     
     self.sendButton = AliasButton( 60,20 );
     self.sendButton:SetText( strings[locale]["send"] );
-    self.sendButton:SetParent( self );
+    self.sendButton:SetParent( self.bottomBar );
     self.sendButton:SetZOrder( self.bottomBar:GetZOrder()+1 );
-    self.sendButton:SetPosition( 580-2*moveleft,625 );
+    self.sendButton:SetPosition( 580-2*moveleft,5 );
     AddCallback(self.sendButton.qs, "MouseEnter", function()
         local chatChannel = self.channelList:GetValue();
         if self.channelList:GetSelectedIndex()==5 then
@@ -258,15 +262,15 @@ function TCWindow:Constructor()
     self.recLabel:SetText( strings[locale]["recievetext"] );
     self.recLabel:SetSize( 120+2*moveleft,20 );
     self.recLabel:SetTextAlignment( Turbine.UI.ContentAlignment.MiddleRight );
-    self.recLabel:SetParent( self );
+    self.recLabel:SetParent( self.bottomBar );
     self.recLabel:SetZOrder( self.bottomBar:GetZOrder()+1 );
-    self.recLabel:SetPosition( 645-2*moveleft,625 );
+    self.recLabel:SetPosition( 645-2*moveleft,5 );
     
     self.recCheck = Turbine.UI.Lotro.CheckBox();
-    self.recCheck:SetParent( self );
+    self.recCheck:SetParent( self.bottomBar );
     self.recCheck:SetSize( 18,18 );
     self.recCheck:SetZOrder( self.bottomBar:GetZOrder()+1 );
-    self.recCheck:SetPosition( 776,626 );
+    self.recCheck:SetPosition( 776,6 );
     
     LoadData( self );
 end
@@ -283,19 +287,23 @@ function SetActiveMap( rtrun, i )
         rtrun.maps[rtrun.activeMap]:SetVisible( true );
         rtrun.maps[rtrun.activeMap]:SetMakeQS( true );
         rtrun.tabs[rtrun.activeMap]:SetFront( true );
-        rtrun.tabs[rtrun.activeMap]:SetWidth( 0 );
+        rtrun.tabs[rtrun.activeMap]:SetWidth( strings[locale][rtrun.maps[rtrun.activeMap].location.."w"] );
         rtrun.tabs[rtrun.activeMap]:SetText( strings[locale][rtrun.maps[rtrun.activeMap].location] );
         rtrun.mapsBg[rtrun.activeMap]:SetVisible( true );
         rtrun.closeb:SetParent( rtrun.maps[rtrun.activeMap] );
         rtrun.channelList:SetParent( rtrun.maps[rtrun.activeMap] );
         for j=2,rtrun.nrMaps do
-            rtrun.tabs[j]:SetPosition( rtrun.tabs[j-1]:GetLeft()+rtrun.tabs[j-1]:GetWidth(),0 );
+            if j~=12 then
+              rtrun.tabs[j]:SetPosition( rtrun.tabs[j-1]:GetLeft()+rtrun.tabs[j-1]:GetWidth(), rtrun.tabs[j-1]:GetTop());
+            end
         end
     end
 end
 
 function SaveData( rtrun )  
     local t = {}
+    local icat = "TC";
+    t[icat] = {}
     for i=1,rtrun.nrMaps do
         t[rtrun.maps[i].location] = rtrun.maps[i]:GetActive( );
     end
