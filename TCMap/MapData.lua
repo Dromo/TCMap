@@ -294,7 +294,7 @@ mapdata["Dor Amarth"]["48.3S 20.1E"] = DorAmarthCoords(-48.3, 20.1);
 -- regular caches Lhingris
 LhingrisCoords = Coords(-45.0, -6.5, -66.9, 22.7);
 mapdata["Lhingris"]={};
-mapdata["Lhinfrisc"] = LhingrisCoords;
+mapdata["Lhingrisc"] = LhingrisCoords;
 mapdata["Lhingris"]["55.9S 5.6E"] = LhingrisCoords(-55.9, 5.6);
 mapdata["Lhingris"]["47.3S 5.6E"] = LhingrisCoords(-47.3, 5.6);
 mapdata["Lhingris"]["49.3S 1.7E"] = LhingrisCoords(-49.3, 1.7);
