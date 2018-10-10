@@ -136,3 +136,33 @@ function UnloadMe( rtrun )
     PatchDataSave( Turbine.DataScope.Character , "TCsettings", t);
     SaveData( rtrun );
 end
+
+
+-- i have no idea what im doing
+AddCallback(Turbine.Chat, "Received", function(sender, args)
+            local prefixLength = strings[locale]["locprefix"]:len();
+            if args.ChatType == 4 and args.Message:sub(1,prefixLength) == strings[locale]["locprefix"] then
+                local loc = ParseChatLocation(args.Message:sub(prefixLength));
+                if loc ~= nil then
+                    local found = false;
+                    local loca
+                    for i=1,mainwindow.nrMaps do
+                        for key,value in pairs(mainwindow.maps[i].pointLocations) do
+                            loca = mainwindow.maps[i].pointLocations[key];
+                            local templ = mapdata[mainwindow.maps[i].location.."c"](loc.y, loc.x)
+                            if loca[1] - 1 < templ[1] and loca[1] + 1 > templ[1] then
+                                if loca[2] - 1 < templ[2] and loca[2] + 1 > templ[2] then
+                                   mainwindow.maps[i].pointButtons[key].Activate();
+                                   found = true;
+                                end
+                            end
+                        end
+                    end
+                    if found then
+                        Turbine.Shell.WriteLine("TCMap: Found TC at "..loc.y.." "..loc.x);
+                    else
+                        Turbine.Shell.WriteLine("TCMap: No TC found near "..loc.y.." "..loc.x);
+                    end
+                end
+            end
+        end);
