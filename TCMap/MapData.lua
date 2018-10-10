@@ -324,7 +324,7 @@ mapdata["Talath Urui"]["57.1S 19.9E"] = TalathUruiCoords(-57.1, 19.9);
 mapdata["Talath Urui"]["57.3S 19.1E"] = TalathUruiCoords(-57.3, 19.1);
 mapdata["Talath Urui"]["54.7S 15.1E"] = TalathUruiCoords(-54.7, 15.1);
 -- regular caches Agarnaith
-AgarnaithCoords = Coords(41.9, 18.2, 58, 39.8);
+AgarnaithCoords = Coords(-41.9, 18.2, -58, 39.8);
 mapdata["Agarnaith"]={};
 mapdata["Agarnaithc"] = AgarnaithCoords;
 mapdata["Agarnaith"]["55.3S 24.5E"] = AgarnaithCoords(-55.3, 24.5);

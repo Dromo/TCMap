@@ -81,10 +81,10 @@ strings["en"]["Dor Amarth"]="Dor Amarth";
 strings["en"]["Dor Amarths"]="DorAma";
 strings["en"]["Dor Amarthw"]=100;
 strings["en"]["Ered Mithrin"] = "Ered Mithrin";
-strings["en"]["Ered Mithrins"] = "EMithrin";
+strings["en"]["Ered Mithrins"] = "EredM";
 strings["en"]["Ered Mithrinw"] = 110;
 strings["en"]["Iron Hills"] = "Iron Hills";
-strings["en"]["Iron Hillss"] = "Iron Hills";
+strings["en"]["Iron Hillss"] = "IHills";
 strings["en"]["Iron Hillsw"] = 110;
 
 strings["en"]["sendtext"]="Send locations to";
