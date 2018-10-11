@@ -18,7 +18,7 @@ strings["Agarnaith"] = 0x411b958c;
 strings["Gorgoroth"] = 0x411b84d4;
 strings["Northern Mirkwood"] = 0x411c2de2;
 strings["Ered Mithrin"] = 0x411c8da9;
-strings["Iron Hills"] = 0x411c8da9;
+strings["Iron Hills"] = 0x411cd4b8;
 
 strings["lock"]= 0x410001d0;
 strings["unlock"]= 0x410001d3;
