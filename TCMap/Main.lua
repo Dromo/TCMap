@@ -150,8 +150,8 @@ AddCallback(Turbine.Chat, "Received", function(sender, args)
                         for key,value in pairs(mainwindow.maps[i].pointLocations) do
                             loca = mainwindow.maps[i].pointLocations[key];
                             local templ = mapdata[mainwindow.maps[i].location.."c"](loc.y, loc.x)
-                            if loca[1] - 1 < templ[1] and loca[1] + 1 > templ[1] then
-                                if loca[2] - 1 < templ[2] and loca[2] + 1 > templ[2] then
+                            if loca[1] - 2 < templ[1] and loca[1] + 2 > templ[1] then
+                                if loca[2] - 2 < templ[2] and loca[2] + 2 > templ[2] then
                                    mainwindow.maps[i].pointButtons[key].Activate();
                                    found = true;
                                 end
@@ -159,9 +159,9 @@ AddCallback(Turbine.Chat, "Received", function(sender, args)
                         end
                     end
                     if found then
-                        Turbine.Shell.WriteLine("TCMap: Found TC at "..loc.y.." "..loc.x);
+                        Turbine.Shell.WriteLine("TCMap: <rgb=#009000>Found TC</rgb> at "..loc.y.." "..loc.x);
                     else
-                        Turbine.Shell.WriteLine("TCMap: No TC found near "..loc.y.." "..loc.x);
+                        Turbine.Shell.WriteLine("TCMap: <rgb=#FF0000>No TC found</rgb> near "..loc.y.." "..loc.x);
                     end
                 end
             end
