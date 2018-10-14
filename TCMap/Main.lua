@@ -12,7 +12,7 @@ if Turbine.Engine:GetLanguage() == Turbine.Language.German then
 --  locale = "en"
 end
 
-wx,wy,wvis,tx,ty,chan,targ,getdata,locklist,activemap = 100,0,true,50,100,5,"",false,{},1; -- standard settings
+wx,wy,wvis,tx,ty,chan,targ,getdata,locklist,activemap,automark = 100,0,true,50,100,5,"",false,{},1,true; -- standard settings
 -- load settings
 local t = PatchDataLoad( Turbine.DataScope.Character , "TCsettings");
 if t~= nil then
@@ -33,6 +33,9 @@ if t~= nil then
     end
     if t["activemap"]~=nil then
         activemap = t["activemap"];
+    end
+    if t["automark"]~=nil then
+        automark = t["automark"];
     end
 end
 
@@ -102,10 +105,16 @@ end
 -- add the shell command
 rtCommand = Turbine.ShellCommand();
 function rtCommand:Execute( command, arguments )
-    if command:lower() == 'tcmap' then
+    if (arguments == "automark") then
+        ToggleAutomark();
+    elseif (arguments == "toggle" ) then
         mainwindow:SetVisible( not mainwindow:IsVisible() );
+    elseif (arguments ~= nil ) then
+        rtCommand:GetHelp();
     end end
-function rtCommand:GetHelp() return strings[locale]["commandH"]; end
+function rtCommand:GetHelp() 
+    Turbine.Shell.WriteLine(strings[locale]["commandH"]); 
+end
 function rtCommand:GetShortHelp() return strings[locale]["commandSH"]; end
 Turbine.Shell.AddCommand( "TCMap;tcmap;", rtCommand );
 listCommandsCommand = Turbine.ShellCommand();
@@ -133,13 +142,15 @@ function UnloadMe( rtrun )
     end
     t["locked"] = locklist;
     t["activemap"] = mainwindow.activeMap;
+    t["automark"] = automark;
     PatchDataSave( Turbine.DataScope.Character , "TCsettings", t);
     SaveData( rtrun );
 end
 
 
 -- i have no idea what im doing
-AddCallback(Turbine.Chat, "Received", function(sender, args)
+function AddAutomarkCallback()
+    return AddCallback(Turbine.Chat, "Received", function(sender, args)
             local prefixLength = strings[locale]["locprefix"]:len();
             if args.ChatType == 4 and args.Message:sub(1,prefixLength) == strings[locale]["locprefix"] then
                 local loc = ParseChatLocation(args.Message:sub(prefixLength));
@@ -166,3 +177,16 @@ AddCallback(Turbine.Chat, "Received", function(sender, args)
                 end
             end
         end);
+end
+
+AMcb = AddAutomarkCallback();
+
+function ToggleAutomark()
+    automark = not automark;
+    if automark then
+        AMcb = AddAutomarkCallback();
+    else
+        RemoveCallback(Turbine.Chat, "Received", AMcb);
+    end
+end
+
