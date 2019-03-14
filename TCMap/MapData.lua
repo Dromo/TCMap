@@ -73,7 +73,7 @@ mapdata["Misty Mountains"]["23.9S 7.4E"] = MistyCoords(-23.9, 7.4);
 mapdata["Misty Mountains"]["25.1S 0.5W"] = MistyCoords(-25.1, -0.5);
 mapdata["Misty Mountains"]["26.1S 9.6E"] = MistyCoords(-26.1, 9.6);
 mapdata["Misty Mountains"]["28.3S 6.7E"] = MistyCoords(-28.3, 6.7);
-mapdata["Misty Mountains"]["28.5S 4.1E"] = MistyCoords(-38.5, 4.1);
+mapdata["Misty Mountains"]["28.5S 4.1E"] = MistyCoords(-28.5, 4.1);
 mapdata["Misty Mountains"]["31.4S 0.4E"] = MistyCoords(-31.4, 0.4);
 
 
