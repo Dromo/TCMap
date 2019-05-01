@@ -19,6 +19,7 @@ strings["Gorgoroth"] = 0x411b84d4;
 strings["Northern Mirkwood"] = 0x411c2de2;
 strings["Ered Mithrin"] = 0x411c8da9;
 strings["Iron Hills"] = 0x411cd4b8;
+strings["Vales of Anduin"] = 0x411da4a0;
 
 strings["lock"]= 0x410001d0;
 strings["unlock"]= 0x410001d3;
@@ -86,6 +87,9 @@ strings["en"]["Ered Mithrinw"] = 110;
 strings["en"]["Iron Hills"] = "Iron Hills";
 strings["en"]["Iron Hillss"] = "IHills";
 strings["en"]["Iron Hillsw"] = 110;
+strings["en"]["Vales of Anduin"] = "Vales of Anduin";
+strings["en"]["Vales of Anduins"] = "VoAnduin";
+strings["en"]["Vales of Anduinw"] = 110;
 
 strings["en"]["sendtext"]="Send locations to";
 strings["en"]["send"]="Send";

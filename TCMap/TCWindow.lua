@@ -32,8 +32,8 @@ function TCWindow:Constructor()
         end
     end
     self:SetWantsUpdates(true);
-    
-    
+
+
     -- Window Dragging functions
     is_dragging = false;
     self.startDrag = function(sender, args)
@@ -73,7 +73,7 @@ function TCWindow:Constructor()
         target.MouseUp = self.endDrag; --60
         target.MouseMove = self.doDrag;
     end
-    
+
     -- Toggle visibility on F12 and Esc
     hudVisible = true;
     self.windowvisible = true;
@@ -91,16 +91,16 @@ function TCWindow:Constructor()
         end
     end
     self:SetWantsKeyEvents(true);
-    
+
 
     self:SetText( "Treasure Cache" );
     self:SetSize( 800,750 );
-    self.nrMaps = 20;
+    self.nrMaps = 21;
     self.activeMap = 1;
-        
+
     self.bottomBar = Turbine.UI.Control();
     self.bottomBar:SetParent( self );
-    
+
     self.mapsBg = {};
     self.mapsBg[1] = mapBg( "Angmar", self );
     self.mapsBg[2] = mapBg( "Evendim", self );
@@ -122,7 +122,8 @@ function TCWindow:Constructor()
     self.mapsBg[18] = mapBg( "Northern Mirkwood", self );
     self.mapsBg[19] = mapBg( "Ered Mithrin", self );
     self.mapsBg[20] = mapBg( "Iron Hills", self );
-    
+    self.mapsBg[21] = mapBg( "Vales of Anduin", self );
+
     self.maps = {};
     self.maps[1] = MapControl("Angmar", self );
     self.maps[2] = MapControl("Evendim", self );
@@ -144,6 +145,7 @@ function TCWindow:Constructor()
     self.maps[18] = MapControl("Northern Mirkwood", self );
     self.maps[19] = MapControl("Ered Mithrin", self );
     self.maps[20] = MapControl("Iron Hills", self );
+    self.maps[21] = MapControl("Vales of Anduin", self );
 
     self.tabs = {};
     self.tabs[1] = TabButton(strings[locale]["Angmar"],45,20,Turbine.UI.Color(1,0.8,0,0));
@@ -168,6 +170,7 @@ function TCWindow:Constructor()
     self.tabs[18] = TabButton(strings[locale]["Northern Mirkwoods"],45,20,Turbine.UI.Color.Green);
     self.tabs[19] = TabButton(strings[locale]["Ered Mithrins"],45,20,Turbine.UI.Color.AliceBlue);
     self.tabs[20] = TabButton(strings[locale]["Iron Hillss"],45,20,Turbine.UI.Color.SlateBlue);
+    self.tabs[21] = TabButton(strings[locale]["Vales of Anduin"],45,20,Turbine.UI.Color.Blue);
 
     for i=1,self.nrMaps do
         self.tabs[i]:SetParent( self );
@@ -201,7 +204,7 @@ function TCWindow:Constructor()
     self.closeb.MouseDown=function() self.closeb:SetBackground( 0x41000197 ) end
     self.closeb.MouseUp=function() self.closeb:SetBackground( 0x41000196 ) end
     self.closeb.MouseClick=function() self:SetVisible( false ); self.windowvisible = false; end
-    
+
     self.bottomBar:SetBackColor( Turbine.UI.Color(0.9,0,0,0) );
     self.bottomBar:SetSize( 800,30);
     self.bottomBar:SetPosition( 0,640 );
@@ -218,7 +221,7 @@ function TCWindow:Constructor()
             self.maps[i]:SetMarked( {} );
         end
     end
-    
+
     self.sendLabel = Turbine.UI.Label();
     self.sendLabel:SetText( strings[locale]["sendtext"] );
     self.sendLabel:SetSize( 165,20 );
@@ -226,7 +229,7 @@ function TCWindow:Constructor()
     self.sendLabel:SetParent( self.bottomBar );
     self.sendLabel:SetZOrder( self.bottomBar:GetZOrder()+1 );
     self.sendLabel:SetPosition( 145,5 );
-    
+
     self.channelList = DropDownList();
     self.channelList:SetParent( self.bottomBar );
     if locale=="fr" then -- slight movement in case of french, since some labels are bigger
@@ -238,7 +241,7 @@ function TCWindow:Constructor()
     self.channelList:SetZOrder( self.bottomBar:GetZOrder()+1 );
     self.channelList:SetPosition( 319,605 );
     self.channelList:SetDropRows(6);
-    
+
     self.channelTable = strings[locale]["channelList"];
     for _,value in pairs( self.channelTable ) do
         self.channelList:AddItem(value[1], value[2]);
@@ -250,7 +253,7 @@ function TCWindow:Constructor()
     self.target:SetTextAlignment( Turbine.UI.ContentAlignment.MiddleLeft );
     self.target:SetZOrder( self.bottomBar:GetZOrder()+1 );
     self.target:SetPosition( 425-moveleft,1 );
-    
+
     self.sendButton = AliasButton( 60,20 );
     self.sendButton:SetText( strings[locale]["send"] );
     self.sendButton:SetParent( self.bottomBar );
@@ -263,7 +266,7 @@ function TCWindow:Constructor()
         end
         self.sendButton:SetShortcutData( chatChannel..self.maps[self.activeMap].location.."TC: "..table.concat(self.maps[self.activeMap]:GetMarked(), ", ") );
     end);
-    
+
     self.recLabel = Turbine.UI.Label();
     self.recLabel:SetText( strings[locale]["recievetext"] );
     self.recLabel:SetSize( 120+2*moveleft,20 );
@@ -271,13 +274,13 @@ function TCWindow:Constructor()
     self.recLabel:SetParent( self.bottomBar );
     self.recLabel:SetZOrder( self.bottomBar:GetZOrder()+1 );
     self.recLabel:SetPosition( 645-2*moveleft,5 );
-    
+
     self.recCheck = Turbine.UI.Lotro.CheckBox();
     self.recCheck:SetParent( self.bottomBar );
     self.recCheck:SetSize( 18,18 );
     self.recCheck:SetZOrder( self.bottomBar:GetZOrder()+1 );
     self.recCheck:SetPosition( 776,6 );
-    
+
     LoadData( self );
 end
 
@@ -306,7 +309,7 @@ function SetActiveMap( rtrun, i )
     end
 end
 
-function SaveData( rtrun )  
+function SaveData( rtrun )
     local t = {}
     local icat = "TC";
     t[icat] = {}
@@ -318,7 +321,7 @@ end
 
 function LoadData( rtrun )
     local t = Turbine.PluginData.Load( Turbine.DataScope.Character , "TCcoords");
-    if t~= nil then 
+    if t~= nil then
         for i=1,rtrun.nrMaps do
             if t[rtrun.maps[i].location]~= nil then
                 rtrun.maps[i]:SetActive(t[rtrun.maps[i].location]);
