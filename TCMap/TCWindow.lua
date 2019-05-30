@@ -80,6 +80,8 @@ function TCWindow:Constructor()
     self.KeyDown=function(sender, args)
         if ( args.Action == Turbine.UI.Lotro.Action.Escape ) then
                 self:SetVisible( false );
+        if ( arg.Action == 268435918 ) then -- Clear search filters Action
+            self:SetVisible( not self:IsVisible() )
         elseif ( args.Action == 268435635 ) then
                 hudVisible=not hudVisible;
                 if hudVisible then
@@ -91,7 +93,6 @@ function TCWindow:Constructor()
         end
     end
     self:SetWantsKeyEvents(true);
-
 
     self:SetText( "Treasure Cache" );
     self:SetSize( 800,750 );
