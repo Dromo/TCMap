@@ -80,7 +80,7 @@ function TCWindow:Constructor()
     self.KeyDown=function(sender, args)
         if ( args.Action == Turbine.UI.Lotro.Action.Escape ) then
                 self:SetVisible( false );
-        if ( arg.Action == 268435918 ) then -- Clear search filters Action
+        elseif ( arg.Action == 268435918 ) then -- Clear search filters Action
             self:SetVisible( not self:IsVisible() )
         elseif ( args.Action == 268435635 ) then
                 hudVisible=not hudVisible;
