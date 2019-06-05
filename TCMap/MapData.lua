@@ -396,27 +396,27 @@ mapdata["Iron Hills"]["28.6N 5.0W"] = IronHillsCoords(28.6, -5.0);
 mapdata["Iron Hills"]["29.0N 6.8W"] = IronHillsCoords(29.0, -6.8);
 
 
-ValesOfAnduinCoords = Coords(18.3, 81.4, -12.3, 40.4)
+ValesOfAnduinCoords = Coords(18.3, -81.4, -12.3, -40.4)
 mapdata["Vales of Anduin"]={}
 mapdata["Vales of Anduinc"] = ValesOfAnduinCoords;
-mapdata["Vales of Anduin"]["0.8S 61.6W"]= ValesOfAnduinCoords(-0.8, 61.6);
-mapdata["Vales of Anduin"]["1.2S 51.4W"]= ValesOfAnduinCoords(-1.2, 51.4);
-mapdata["Vales of Anduin"]["1.6N 51.8W"]= ValesOfAnduinCoords(1.6, 51.8);
-mapdata["Vales of Anduin"]["1.7N 53.6W"]= ValesOfAnduinCoords(1.7, 53.6);
-mapdata["Vales of Anduin"]["11.0N 52.6W"]= ValesOfAnduinCoords(11.0, 52.6);
-mapdata["Vales of Anduin"]["16.7N 54.3W"]= ValesOfAnduinCoords(16.7, 54.3);
-mapdata["Vales of Anduin"]["16.7N 57.0W"]= ValesOfAnduinCoords(16.7, 57.0);
-mapdata["Vales of Anduin"]["11.8N 59.4W"]= ValesOfAnduinCoords(11.8, 59.4);
-mapdata["Vales of Anduin"]["8.5N 62.8W"]= ValesOfAnduinCoords(8.5, 62.8);
-mapdata["Vales of Anduin"]["3.1N 56.5W"]= ValesOfAnduinCoords(3.1, 56.5);
-mapdata["Vales of Anduin"]["9.4N 60.1W"]= ValesOfAnduinCoords(9.4, 60.1);
-mapdata["Vales of Anduin"]["7.1N 56.0W"]= ValesOfAnduinCoords(7.1, 56.0);
-mapdata["Vales of Anduin"]["5.7N 57.1W"]= ValesOfAnduinCoords(5.7, 57.1);
-mapdata["Vales of Anduin"]["10.1S 59.7W"]= ValesOfAnduinCoords(-10.1, 59.7);
-mapdata["Vales of Anduin"]["5.1S 59.1W"]= ValesOfAnduinCoords(-5.1, 59.1);
-mapdata["Vales of Anduin"]["2.4N 57.8W"]= ValesOfAnduinCoords(2.4, 57.8);
-mapdata["Vales of Anduin"]["11.0S 62.2W"]= ValesOfAnduinCoords(-11.0, 62.2);
-mapdata["Vales of Anduin"]["0.7S 59.5W"]= ValesOfAnduinCoords(-0.7, 59.5);
+mapdata["Vales of Anduin"]["0.8S 61.6W"]= ValesOfAnduinCoords(-0.8, -61.6);
+mapdata["Vales of Anduin"]["1.2S 51.4W"]= ValesOfAnduinCoords(-1.2, -51.4);
+mapdata["Vales of Anduin"]["1.6N 51.8W"]= ValesOfAnduinCoords(1.6, -51.8);
+mapdata["Vales of Anduin"]["1.7N 53.6W"]= ValesOfAnduinCoords(1.7, -53.6);
+mapdata["Vales of Anduin"]["11.0N 52.6W"]= ValesOfAnduinCoords(11.0, -52.6);
+mapdata["Vales of Anduin"]["16.7N 54.3W"]= ValesOfAnduinCoords(16.7, -54.3);
+mapdata["Vales of Anduin"]["16.7N 57.0W"]= ValesOfAnduinCoords(16.7, -57.0);
+mapdata["Vales of Anduin"]["11.8N 59.4W"]= ValesOfAnduinCoords(11.8, -59.4);
+mapdata["Vales of Anduin"]["8.5N 62.8W"]= ValesOfAnduinCoords(8.5, -62.8);
+mapdata["Vales of Anduin"]["3.1N 56.5W"]= ValesOfAnduinCoords(3.1, -56.5);
+mapdata["Vales of Anduin"]["9.4N 60.1W"]= ValesOfAnduinCoords(9.4, -60.1);
+mapdata["Vales of Anduin"]["7.1N 56.0W"]= ValesOfAnduinCoords(7.1, -56.0);
+mapdata["Vales of Anduin"]["5.7N 57.1W"]= ValesOfAnduinCoords(5.7, -57.1);
+mapdata["Vales of Anduin"]["10.1S 59.7W"]= ValesOfAnduinCoords(-10.1, -59.7);
+mapdata["Vales of Anduin"]["5.1S 59.1W"]= ValesOfAnduinCoords(-5.1, -59.1);
+mapdata["Vales of Anduin"]["2.4N 57.8W"]= ValesOfAnduinCoords(2.4, -57.8);
+mapdata["Vales of Anduin"]["11.0S 62.2W"]= ValesOfAnduinCoords(-11.0, -62.2);
+mapdata["Vales of Anduin"]["0.7S 59.5W"]= ValesOfAnduinCoords(-0.7, -59.5);
 
 
 
