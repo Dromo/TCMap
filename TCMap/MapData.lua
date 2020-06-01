@@ -418,7 +418,19 @@ mapdata["Vales of Anduin"]["2.4N 57.8W"]= ValesOfAnduinCoords(2.4, -57.8);
 mapdata["Vales of Anduin"]["11.0S 62.2W"]= ValesOfAnduinCoords(-11.0, -62.2);
 mapdata["Vales of Anduin"]["0.7S 59.5W"]= ValesOfAnduinCoords(-0.7, -59.5);
 
-
-
-
+WellsOfLangfloodCoords = Coords(34.2, -75.2, 13.8, -47.9)
+mapdata["Wells of Langflood"]={}
+mapdata["Wells of Langfloodc"] = WellsOfLangfloodCoords;
+mapdata["Wells of Langflood"]["21.8N, 52.1W"]= WellsOfLangfloodCoords(21.8, -52.1)
+mapdata["Wells of Langflood"]["21.5N, 50.3W"]= WellsOfLangfloodCoords(21.5, -50.3)
+mapdata["Wells of Langflood"]["17.6N, 54.3W"]= WellsOfLangfloodCoords(17.6, -54.3)
+mapdata["Wells of Langflood"]["20.6N, 57.1W"]= WellsOfLangfloodCoords(20.6, -57.1)
+mapdata["Wells of Langflood"]["23.4N, 56.6W"]= WellsOfLangfloodCoords(23.4, -56.6)
+mapdata["Wells of Langflood"]["19.9N, 62.4W"]= WellsOfLangfloodCoords(19.9, -62.4)
+mapdata["Wells of Langflood"]["21.6N, 63.2W"]= WellsOfLangfloodCoords(21.6, -63.2)
+mapdata["Wells of Langflood"]["21.1N, 60.2W"]= WellsOfLangfloodCoords(21.1, -60.2)
+mapdata["Wells of Langflood"]["25.9N, 55.8W"]= WellsOfLangfloodCoords(25.9, -55.8)
+mapdata["Wells of Langflood"]["30.2N, 58.3W"]= WellsOfLangfloodCoords(30.2, -58.3)
+mapdata["Wells of Langflood"]["27.1N, 60.5W"]= WellsOfLangfloodCoords(27.1, -60.5)
+mapdata["Wells of Langflood"]["32.0N, 60.0W"]= WellsOfLangfloodCoords(32.0, -61.0)
 
