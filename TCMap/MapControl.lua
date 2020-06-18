@@ -8,12 +8,12 @@ MapControl = class( Turbine.UI.Window );
 function MapControl:Constructor( location, parent )
     Turbine.UI.Window.Constructor( self );
     self:SetSize(800,630);
-    
+
     self.pointCoords = {};
     self.pointLabels = {};
     self.pointLocations = {};
     self.pointButtons = {};
-    
+
     self.location = location;
 
     self.locked = false;
@@ -22,9 +22,9 @@ function MapControl:Constructor( location, parent )
         table.insert(self.pointCoords,key);
         table.insert(self.pointLocations,value);
     end
-    
+
     self.pointNr = tableLength(self.pointCoords)
-    
+
     self.lockIcon = Turbine.UI.Button();
     self.lockIcon:SetParent( self );
     self.lockIcon:SetSize( 20,20 );
@@ -48,7 +48,7 @@ function MapControl:Constructor( location, parent )
             self.pointLabels[i]:SetSize( 90,25 );
             self.pointLabels[i]:SetText( "K\195\162m Lag\195\186rz \n 18.7N 33.5E" );
         end
-        if self.pointCoords[i]=="45.6S 19.7W" or 
+        if self.pointCoords[i]=="45.6S 19.7W" or
             self.pointCoords[i]=="53.7S 19.5W" or
             self.pointCoords[i]=="10.3N 14.3W" or
             self.pointCoords[i]=="11.2S 33.7W" then
@@ -72,19 +72,19 @@ function MapControl:Constructor( location, parent )
     self.menu2 = Turbine.UI.MenuItem( strings[locale]["lockmsg"] );
     self.menu2.Click = function(sender,args)
         self:SetLocked( not self.locked );
-    end 
+    end
     self.rightClick:GetItems():Add(self.menu1);
     self.rightClick:GetItems():Add(self.menu2);
-    
+
     local menu = self.rightClick
-    
+
     self.MouseClick = function( sender, args )
         parent:Activate();
         if (args.Button == Turbine.UI.MouseButton.Right) then
             menu:ShowMenu();
         end
     end
-    
+
     self.markqs = Turbine.UI.Lotro.Quickslot();
     self.markqs:SetParent( self );
     self.markqs:SetSize( 12,12 );
@@ -100,7 +100,7 @@ function MapControl:Constructor( location, parent )
     self.markqs.hider:SetZOrder( self.markqs:GetZOrder()+1 );
     self.markqs.hider:SetBackground( strings["mappoint"] );
     self.markqs.hider:SetBlendMode( Turbine.UI.BlendMode.AlphaBlend );
-    
+
     self.moveqs = Turbine.UI.Lotro.Quickslot();
     self.moveqs:SetParent( self );
     self.moveqs:SetSize( 12,12 );
@@ -116,7 +116,7 @@ function MapControl:Constructor( location, parent )
     self.moveqs.hider:SetZOrder( self.moveqs:GetZOrder()+1 );
     self.moveqs.hider:SetBackground( strings["mappoint"] );
     self.moveqs.hider:SetBlendMode( Turbine.UI.BlendMode.AlphaBlend );
-    
+
     AddCallback(Turbine.Chat, "Received", function(sender, args)
             local prefixLength = strings[locale]["locprefix"]:len();
             if args.ChatType == 4 and args.Message:sub(1,prefixLength) == strings[locale]["locprefix"] then
@@ -226,7 +226,7 @@ function MapControl:GetMarked(  )
     return t
 end
 
-local LOC_MESSAGES = { 
+local LOC_MESSAGES = {
     'r(%d+) lx(%d+%.?%d*) ly(%d+%.?%d*) i%d+ ox(%d+%.?%d*) oy(%d+%.?%d*) oz(%d+%.?%d*) h(%d+%.?%d*)',
     'r(%d+) lx(%d+%.?%d*) ly(%d+%.?%d*) i%d+ cInside ox(.-%d+%.?%d*) oy(.-%d+%.?%d*) oz(.-%d+%.?%d*) h(%d+%.?%d*)',
     'r(%d+) lx(%d+%.?%d*) ly(%d+%.?%d*) i%d+ ox(%d+%.?%d*) oy(%d+%.?%d*) oz(%d+%.?%d*)',
@@ -258,7 +258,7 @@ function round(num, idp)
 end
 
 
-function tonum(val) 
+function tonum(val)
     if locale ~= 'en' then
         return tonumber((string.gsub(val,"%.",",")))
     else
