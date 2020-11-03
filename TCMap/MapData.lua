@@ -434,3 +434,21 @@ mapdata["Wells of Langflood"]["30.2N, 58.3W"]= WellsOfLangfloodCoords(30.2, -58.
 mapdata["Wells of Langflood"]["27.1N, 60.5W"]= WellsOfLangfloodCoords(27.1, -60.5)
 mapdata["Wells of Langflood"]["32.0N, 60.0W"]= WellsOfLangfloodCoords(32.0, -61.0)
 
+EldersladeCoords = Coords(46.6, -74.8, 31.6, -54.8)
+mapdata["Elderslade"]={}
+mapdata["Eldersladec"] = EldersladeCoords;
+mapdata["Elderslade"]["33.9N, 57.6W"]= EldersladeCoords(33.9, -57.6)
+mapdata["Elderslade"]["33.0N, 57.1W"]= EldersladeCoords(33.0, -57.1)
+mapdata["Elderslade"]["32.6N, 58.7W"]= EldersladeCoords(32.6, -58.7)
+mapdata["Elderslade"]["34.3N, 61.9W"]= EldersladeCoords(34.3, -61.9)
+mapdata["Elderslade"]["36.0N, 62.2W"]= EldersladeCoords(36.0, -62.2)
+mapdata["Elderslade"]["36.2N, 60.6W"]= EldersladeCoords(36.2, -60.6)
+mapdata["Elderslade"]["32.4N, 62.6W"]= EldersladeCoords(32.4, -62.6)
+mapdata["Elderslade"]["33.0N, 63.6W"]= EldersladeCoords(33.0, -63.6)
+mapdata["Elderslade"]["40.7N, 62.9W"]= EldersladeCoords(40.7, -62.9)
+mapdata["Elderslade"]["37.1N, 66.0W"]= EldersladeCoords(37.1, -66.0)
+mapdata["Elderslade"]["35.1N, 66.6W"]= EldersladeCoords(35.1, -66.6)
+mapdata["Elderslade"]["39.3N, 67.5W"]= EldersladeCoords(39.3, -67.5)
+mapdata["Elderslade"]["37.3N, 68.5W"]= EldersladeCoords(37.3, -68.5)
+mapdata["Elderslade"]["36.4N, 68.5W"]= EldersladeCoords(36.4, -68.5)
+

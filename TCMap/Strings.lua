@@ -21,6 +21,7 @@ strings["Ered Mithrin"] = 0x411c8da9;
 strings["Iron Hills"] = 0x411cd4b8;
 strings["Vales of Anduin"] = 0x411da4a0;
 strings["Wells of Langflood"] = 0x411ee769;
+strings["Elderslade"] = 0x411fb86f;
 
 strings["lock"]= 0x410001d0;
 strings["unlock"]= 0x410001d3;
@@ -92,8 +93,11 @@ strings["en"]["Vales of Anduin"] = "Vales of Anduin";
 strings["en"]["Vales of Anduins"] = "Anduin";
 strings["en"]["Vales of Anduinw"] = 110;
 strings["en"]["Wells of Langflood"] = "Wells of Langflood";
-strings["en"]["Wells of Langfloods"] = "Langflood";
+strings["en"]["Wells of Langfloods"] = "Langf";
 strings["en"]["Wells of Langfloodw"] = 140;
+strings["en"]["Elderslade"] = "Elderslade";
+strings["en"]["Elderslades"] = "Elder";
+strings["en"]["Eldersladew"] = 100;
 
 
 strings["en"]["sendtext"]="Send locations to";
